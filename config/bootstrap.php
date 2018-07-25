@@ -195,8 +195,6 @@ Configure::write('AclManager.ignoreActions', array('isAuthorized'));
 Plugin::load('Migrations');
 Plugin::load('Acl', ['bootstrap' => true]);
 Plugin::load('AclManager', ['bootstrap' => true, 'routes' => true]);
-Plugin::load('Markdown');
-Plugin::load('Documents', ['bootstrap' => false, 'routes' => true]);
 
 /**
  * Documents plugin
