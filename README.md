@@ -131,3 +131,7 @@ Now you can start customizing your permissions and Develop your app. Do not forg
 
 Iván Amat on [GitHub](https://github.com/ivanamat)  
 [www.ivanamat.es](http://www.ivanamat.es/)
+
+## Modified
+
+Dixon Pedraza on [GitHub](https://github.com/pedrazadixon)  
