@@ -122,6 +122,7 @@ class AppController extends Controller {
      * @return void
      */
     public function isAuthorized($user) {
+        // Only for ACL setup
         // return true;
         
         // Admin can access every action
