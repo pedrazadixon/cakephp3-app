@@ -1,6 +1,5 @@
 # CakePHP Application Skeleton
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
 [![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
 
 A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.x. The skeleton has been preloaded with the [Acl](https://github.com/cakephp/acl), [AclManager](https://github.com/ivanamat/cakephp3-aclmanager) plugins. Manages groups, roles, users and ACL.
@@ -36,7 +35,6 @@ configuration relevant for your application.
 Uncomment `$this->Auth->allow();` from initialize function on `AppController`. This lets you create Groups, Roles and Users.
 
     public function initialize() {
-        
         ...
         
         // Only for ACL setup
@@ -51,7 +49,6 @@ Uncumment `return true;` from isAuthorized function on `AppController`. This all
         return true;
         
         ...
-
     }
     
 ## Create the first group, the main role and the first user.
@@ -66,9 +63,8 @@ Uncumment `return true;` from isAuthorized function on `AppController`. This all
 Comment `$this->Auth->allow();` from initialize function and `return true;` from isAuthorized function on `AppController`.
 
     public function initialize() {
-        parent::initialize();
         ...
-        
+       
         // Only for ACL setup
         // $this->Auth->allow();
     }
@@ -99,4 +95,4 @@ Iván Amat on [GitHub](https://github.com/ivanamat)
 
 ## Modified
 
-Dixon Pedraza on [GitHub](https://github.com/pedrazadixon)  
+Dixon Pedraza - [GitHub](https://github.com/pedrazadixon)  
