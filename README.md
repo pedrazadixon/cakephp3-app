@@ -36,39 +36,8 @@ configuration relevant for your application.
 Uncomment `$this->Auth->allow();` from initialize function on `AppController`. This lets you create Groups, Roles and Users.
 
     public function initialize() {
-        parent::initialize();
-
-        $this->loadComponent('RequestHandler');
-        $this->loadComponent('Flash');
-        $this->loadComponent('Auth', [
-            'authorize' => [
-                'Acl.Actions' => ['actionPath' => 'controllers/']
-            ],
-            'loginAction' => [
-                'plugin' => false,
-                'controller' => 'Users',
-                'action' => 'login'
-            ],
-            'loginRedirect' => [
-                'plugin' => false,
-                'controller' => 'Users',
-                'action' => 'index'
-            ],
-            'logoutRedirect' => [
-                'plugin' => false,
-                'controller' => 'Users',
-                'action' => 'login'
-            ],
-            'unauthorizedRedirect' => [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'prefix' => false
-            ],
-            'authError' => 'You are not authorized to access that location.',
-            'flash' => [
-                'element' => 'error'
-            ]
-        ]);
+        
+        ...
         
         // Only for ACL setup
         $this->Auth->allow();
@@ -77,16 +46,12 @@ Uncomment `$this->Auth->allow();` from initialize function on `AppController`. T
 Uncumment `return true;` from isAuthorized function on `AppController`. This allows you to access the Acl Manager plugin.
 
     public function isAuthorized($user) {
+        
         // Only for ACL setup
         return true;
         
-        // Admin can access every action
-        if (isset($user['role_id']) && $user['role_id'] === 1) {
-            return true;
-        }
+        ...
 
-        // Default deny
-        return false;
     }
     
 ## Create the first group, the main role and the first user.
