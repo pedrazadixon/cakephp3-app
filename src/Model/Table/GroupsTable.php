@@ -40,6 +40,7 @@ class GroupsTable extends Table {
 
         $this->addBehavior('Acl.Acl', ['type' => 'requester']);
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Muffin/Footprint.Footprint');
 
         $this->hasMany('Roles', [
             'foreignKey' => 'group_id'

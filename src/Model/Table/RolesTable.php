@@ -40,6 +40,7 @@ class RolesTable extends Table {
 
         $this->addBehavior('Acl.Acl', ['type' => 'requester']);
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Muffin/Footprint.Footprint');
 
         $this->belongsTo('Groups', [
             'foreignKey' => 'group_id'
