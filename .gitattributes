@@ -16,6 +16,12 @@
 *.txt text
 *.xml text
 
+# Fonts
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
 # Declare files that will always have CRLF line endings on checkout.
 *.bat eol=crlf
 
